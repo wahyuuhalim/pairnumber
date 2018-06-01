@@ -1,7 +1,16 @@
-const box = document.querySelector('.box');
+var containerBox = document.getElementById("container-box");
 
-function ubahWarna() {
-  box.style.backgroundColor = 'white';
+for (var i = 0; i < 10; i++) {
+  var elDiv = document.createElement('div');
+  elDiv.className = "style-box";
+
+  containerBox.appendChild(elDiv);
+
+  var elDiv = document.createElement('div');
+  elDiv.className = "style-box";
+
+  containerBox.appendChild(elDiv);
 }
 
-box.onClick = ubahWarna;
+var h2 = document.getElementsByTagName('h2');
+h2.style.textAlign = "center";
