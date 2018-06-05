@@ -1,20 +1,31 @@
-  
+  body {
+    background-color: #fff;
+    padding: 20px ;
+  }
+
   h2 {
+    color: #000;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   
-  #container-box {
-    width: 550px;
+  .container-box {
+    width: 440px;
     height: 440px;
-    border: 1px solid #ccc;
-    margin-left: 30%;
+    border: 1px solid #000;
+    margin-left: 33%;
+    padding: 4px 4px;
   }
 
   .style-box {
     width: 100px;
     height: 100px;
     border: 1px solid #000;
-    float: left;
-    margin: 4px;
+    margin: 4px 4px;
+    background-color: #fff;
+    display: inline-block;
+  }
+
+  .baris-box {
+    display: block;
   }

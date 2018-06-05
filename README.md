@@ -1,2 +1,2 @@
 # pairnumber
-Final project intro to programming Hacktiv8
+Final project Intro to programming Hacktiv8

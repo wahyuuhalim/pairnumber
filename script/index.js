@@ -1,16 +1,59 @@
-var containerBox = document.getElementById("container-box");
+var containerGame = document.getElementById("container-game");
 
-for (var i = 0; i < 10; i++) {
-  var elDiv = document.createElement('div');
-  elDiv.className = "style-box";
+var boardSetting = [];
 
-  containerBox.appendChild(elDiv);
+var jumlahBaris = 4;
+var jumlahKolom = 4;
 
-  var elDiv = document.createElement('div');
-  elDiv.className = "style-box";
+function generateBoardSetting() {
+  //var randomArray = generateRandomArray()
 
-  containerBox.appendChild(elDiv);
+  //Buat array 2 dimensi yang isinya objek
+  for (var i = 0; i < jumlahBaris; i++) {
+    var arrBaris = [];
+
+    for (var j = 0; j < jumlahKolom; j++) {
+      var isiBox = {
+        value: (i + j),
+        isOpened: false,
+        isMatched: false
+      }
+
+     arrBaris.push(isiBox);
+    }
+    
+    boardSetting.push(arrBaris);
+  }
 }
 
-var h2 = document.getElementsByTagName('h2');
-h2.style.textAlign = "center";
+function printBoard() {
+
+  for (var i = 0; i < jumlahBaris; i++) {
+    var elBaris = document.createElement('div');
+    elBaris.id = 'baris-' + i;
+    elBaris.className = "baris-box";
+
+     for (var j = 0; j < jumlahKolom; j++) {
+      var elKolom = document.createElement('div');
+      elKolom.id = 'baris-' + i + j;
+      elKolom.className = 'style-box';
+      elKolom.innerHTML = boardSetting[i][j].value;
+
+      elBaris.appendChild(elKolom);
+    }
+
+     containerGame.appendChild(elBaris);
+  }
+}  
+
+generateBoardSetting();
+printBoard();
+
+// function generateRandomArray() {
+//   //return random array
+// }
+
+
+
+  
+
