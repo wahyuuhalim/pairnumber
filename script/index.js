@@ -27,6 +27,9 @@ function generateBoardSetting() {
 }
 
 function printBoard() {
+  var angka = 8;
+  var value = 0;
+  var arrMuncul = [0, 0, 0, 0, 0, 0, 0, 0]
 
   for (var i = 0; i < jumlahBaris; i++) {
     var elBaris = document.createElement('div');
@@ -34,26 +37,42 @@ function printBoard() {
     elBaris.className = "baris-box";
 
      for (var j = 0; j < jumlahKolom; j++) {
+
       var elKolom = document.createElement('div');
       elKolom.id = 'baris-' + i + j;
       elKolom.className = 'style-box';
-      elKolom.innerHTML = boardSetting[i][j].value;
+      
+      //kalo angka sudah sama dengan 8 maka angka nya diubah lagi jadi 1
+      // if (angka > 8) {
+      //   angka = 1;
+      // }
 
+      value = Math.floor(Math.random() * angka) + 1; // 1 - 8 => 2
+      arrMuncul[value-1] = arrMuncul[value-1] + 1;
+
+      while (arrMuncul[value - 1] > 2) {
+        value = Math.floor(Math.random() * angka) + 1; // 6
+        arrMuncul[value - 1] = arrMuncul[value - 1] + 1;
+      }
+
+      if (arrMuncul[value-1] <= 2) {
+        elKolom.innerHTML = value;
+      } 
+      
       elBaris.appendChild(elKolom);
     }
 
      containerGame.appendChild(elBaris);
   }
+
 }  
+
+function generateRandomArray() {
+  //return random array
+  return math.random() * angka;
+}
 
 generateBoardSetting();
 printBoard();
-
-// function generateRandomArray() {
-//   //return random array
-// }
-
-
-
   
 
