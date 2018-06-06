@@ -30,3 +30,13 @@
   .baris-box {
     display: block;
   }
+
+  .open-box {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    margin: 4px 4px;
+    background-color: #fff;
+    display: inline-block;
+    background-color: yellow;
+  }
