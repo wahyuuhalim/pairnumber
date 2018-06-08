@@ -78,10 +78,6 @@ function printBoard() {
       } else if (boardSetting[i][j].isOpened === true) {
         elKolom.innerHTML = boardSetting[i][j].value;
       }
-
-      if (boardSetting[i][j].isOpened === true || tahanBuka === true) {
-        elKolom.onclick = '';
-      }
        
       elBaris.appendChild(elKolom);
     }
