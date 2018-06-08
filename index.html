@@ -1,35 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pair Number</title>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="styles/style.css" type="text/css">
-
-    <title>Welcome To Pair Number</title> 
-
-    <style>
-      .start, a {
-        text-align: center;
-        text-decoration: none;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        color: #000;
-        margin-top: 50px;
-      }
-
-      .button {
-        width: 100px;
-      }
-    </style>
-
   </head>
 
   <body>
-    <section class="background">
-      <div class="start">
-        <h1><b>Welcome to Pair Number</b></h1>
-        <button class="button">
-          <a href="./game.html"><b>Start Game</b></a>
-        </button>
-      </div>
-    </section>
+    <h2>Pair Number</h2>
+    
+    <div id="container-game" class="container-box">
+    </div>
+
+    <button onclick="resetGame()" class="resetGame-button" >
+      Star Game
+    </button>
+
+    <script src="script/index.js"></script>
   </body>
 </html>

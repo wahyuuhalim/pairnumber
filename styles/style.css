@@ -1,30 +1,37 @@
   body {
-    background-color: #fff;
+    background-color: rgb(14, 13, 13);
     padding: 20px ;
   }
 
   h2 {
-    color: #000;
+    color: #ccc;
     text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana;
+    font-size: 40px;
   }
   
   .container-box {
-    width: 440px;
+    width: 450px;
     height: 440px;
     border: 1px solid #000;
+    /* border-radius: 5px; */
     margin-left: 33%;
-    padding: 4px 4px;
+    padding: 15px 10px;
+    font-size: 70px;
+    font-family: Verdana, Geneva, Tahoma, serif;
+    text-align: center;
+    background-color: rgb(95, 138, 202);
   }
 
   .style-box {
-    background-color: blue;
     width: 100px;
     height: 100px;
     border: 1px solid #000;
+    border-radius: 10px;
     margin: 4px 4px;
-    background-color: #fff;
+    background-color: rgb(236, 13, 13);
     display: inline-block;
+    color: #fff;
   }
 
   .baris-box {
@@ -35,8 +42,16 @@
     width: 100px;
     height: 100px;
     border: 1px solid #000;
+    border-radius: 10px;
     margin: 4px 4px;
     background-color: #fff;
     display: inline-block;
-    background-color: yellow;
+    background-color: rgb(226, 250, 6);
+    color: rgb(9, 117, 9);
+  }
+
+  .resetGame-button {
+    margin-left: 47%;
+    margin-top: 20px;
+    padding: 10px;
   }
